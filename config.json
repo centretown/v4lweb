@@ -1,0 +1,12 @@
+{
+    "HttpUrl": "192.168.10.7:8080",
+    "Camera": 
+      {
+        "CameraType": 0,
+        "Path": "/dev/video0",
+        "Codec": "MJPG",
+        "Width": 1920,
+        "Height": 1080,
+        "FPS": 30
+      }
+}
