@@ -19,7 +19,7 @@ type WebcamHandler struct {
 	Value      int32
 	Controls   []*camera.Control
 	controlMap map[string]*camera.Control
-	// tmpl       *template.Template
+	tmpl       *template.Template
 }
 
 func NewWebcamHandler(key string, ctls []*camera.Control, tmpl *template.Template) *WebcamHandler {
@@ -27,7 +27,6 @@ func NewWebcamHandler(key string, ctls []*camera.Control, tmpl *template.Templat
 		Key:        key,
 		Controls:   ctls,
 		controlMap: make(map[string]*camera.Control),
-		// tmpl:       tmpl,
 	}
 
 	for _, ctl := range ctls {

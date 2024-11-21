@@ -1,12 +1,105 @@
 {
-    "HttpUrl": "192.168.10.7:8080",
-    "Camera": 
+  "HttpUrl": "192.168.10.7:8080",
+  "Camera": {
+    "CameraType": 0,
+    "Path": "/dev/video0",
+    "Codec": "MJPG",
+    "Width": 1920,
+    "Height": 1080,
+    "FPS": 30
+  },
+  "Drivers": {
+    "uvcvideo": [
       {
-        "CameraType": 0,
-        "Path": "/dev/video0",
-        "Codec": "MJPG",
-        "Width": 1920,
-        "Height": 1080,
-        "FPS": 30
+        "Key": "Zoom, Absolute",
+        "Controls": [
+          {
+            "Url": "/zoomin",
+            "Icon": "zoom_in",
+            "Multiplier": 1
+          },
+          {
+            "Url": "/zoomout",
+            "Icon": "zoom_out",
+            "Multiplier": -1
+          }
+        ]
+      },
+      {
+        "Key": "Pan, Absolute",
+        "Controls": [
+          {
+            "Url": "/panleft",
+            "Icon": "arrow_back",
+            "Multiplier": -1
+          },
+          {
+            "Url": "/panright",
+            "Icon": "arrow_forward",
+            "Multiplier": 1
+          }
+        ]
+      },
+      {
+        "Key": "Tilt, Absolute",
+        "Controls": [
+          {
+            "Url": "/tiltup",
+            "Icon": "arrow_upward",
+            "Multiplier": 1
+          },
+          {
+            "Url": "/tiltdown",
+            "Icon": "arrow_downward",
+            "Multiplier": -1
+          }
+        ]
+      },
+      {
+        "Key": "Brightness",
+        "Controls": [
+          {
+            "Url": "/brightnessup",
+            "Icon": "brightness_high",
+            "Multiplier": 10
+          },
+          {
+            "Url": "/brightnessdown",
+            "Icon": "brightness_low",
+            "Multiplier": -10
+          }
+        ]
+      },
+      {
+        "Key": "Contrast",
+        "Controls": [
+          {
+            "Url": "/contrastup",
+            "Icon": "contrast_square",
+            "Multiplier": 10
+          },
+          {
+            "Url": "/contrastdown",
+            "Icon": "exposure",
+            "Multiplier": -10
+          }
+        ]
+      },
+      {
+        "Key": "Saturation",
+        "Controls": [
+          {
+            "Url": "/saturationup",
+            "Icon": "backlight_high",
+            "Multiplier": 10
+          },
+          {
+            "Url": "/saturationdown",
+            "Icon": "backlight_low",
+            "Multiplier": -10
+          }
+        ]
       }
+    ]
+  }
 }
